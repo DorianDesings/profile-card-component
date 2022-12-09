@@ -1,0 +1,140 @@
+:root {
+  --bg-color: hsl(185, 75%, 39%);
+  --text-color: hsla(228, 23%, 23%);
+  --text-color-grey: hsla(228, 10%, 47%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin-inline: auto;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color-grey);
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 20rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.card__circle {
+  position: absolute;
+  transform: scale(1);
+  z-index: -1;
+}
+
+.card__circle--top {
+  top: -50%;
+  left: -60%;
+}
+
+.card__circle--bottom {
+  bottom: -50%;
+  right: -60%;
+}
+
+@media screen and (min-width: 768px) {
+  .card__circle {
+    transform: scale(2);
+  }
+
+  .card__circle--top {
+    left: -120%;
+  }
+
+  .card__circle--bottom {
+    right: -120%;
+  }
+}
+
+.card__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 7.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-image: url(/dist/assets/images/bg-pattern-card.svg);
+  background-size: contain;
+}
+
+.card__image {
+  position: relative;
+  bottom: 0;
+  width: 5.5rem;
+  outline: 0.3rem solid #fff;
+  outline-offset: -1px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(50%);
+}
+
+.card__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid var(--text-color-grey);
+}
+
+.card__data {
+  padding: 3rem 0 1.5rem;
+}
+
+.card__name {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.card__age {
+  font-weight: 400;
+  color: var(--text-color-grey);
+}
+
+.card__city {
+  font-size: 0.9rem;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+}
+
+.statistic__number {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.statistic__name {
+  font-size: 0.8rem;
+}
